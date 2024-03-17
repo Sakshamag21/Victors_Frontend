@@ -61,6 +61,7 @@ function TeacherZone({ children }) {
                 <img src="../../static/profile_photo.png" id="profile_photo" alt="profile_photo" />
                 <a href={`../../teacherDashboard/${id}`}>Dashboard</a>
                 <a href={`../../teacherAttendance/${id}`}>Attendance</a>
+                {teacherData &&<a href={`../../teacherSchedule/${id}/${teacherData.class}`}>Time Table</a>}
                 <a href={`../../teacherResult/${id}`}>Examination Results</a>
 
                 <button className="dropdown-btn" onClick={(e) => { toggleDropdown(e); dropDownSign(0); }} id="dropdown">Study Resources
@@ -116,7 +117,7 @@ function TeacherZone({ children }) {
                 <span className="open" onClick={openNav}>&#9776;</span>
                 <span id="title"></span>
             </div>
-            <div style={{display:'flex',justifyContent:"center",alignItems:'center',height:"90vh",backgroundImage:'url("../../static/back6.jpg")',backgroundSize:'cover'}}>
+            <div style={{display:'flex',justifyContent:"center",alignItems:'center',height:"100vh",backgroundImage:'url("../../static/back6.jpg")',backgroundSize:'cover'}}>
                 {React.Children.map(children, child => {
                     return React.cloneElement(child, { teacherData });
                 })}

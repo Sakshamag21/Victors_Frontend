@@ -64,6 +64,7 @@ function StudentZone({ children }) {
                 <a href={`../../studentAttendance/${id}`}>Attendance</a>
                 <a href={`../../studentResult/${id}`}>Examination Results</a>
                 <a href={`../../studentFees/${id}`}>Fee Status/Dues</a>
+                {studentClass &&<a href={`../../studentSchedule/${id}/${studentClass}`}>Time Table</a>}
                 {studentClass &&<a href={`../../studentResources/${id}/${studentClass}`}>Study Resources</a>}
             </div>
 

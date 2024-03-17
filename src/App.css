@@ -1,3 +1,14 @@
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
+
+
+
 .App {
   text-align: center;
 }
@@ -427,8 +438,4 @@ height:3rem;
       border-radius: 150%;
   }
   
-  table, th, td {
-    margin-top: 5%;
-    border:1px solid black;
-  }
   

@@ -1,6 +1,4 @@
 import { Switch, Route } from "react-router-dom";
-import About from "./component/About";
-import Home from "./component/Home";
 import Main from "./component/Main";
 import TeacherZone from "./component/teacherZone";
 import Login from "./component/Login";
@@ -15,14 +13,17 @@ import StudentResult from "./component/studentResult";
 import TeacherAttendance from "./component/teacherAttendance";
 import StudentAttendance from "./component/studentAttendance";
 import StudentFees from "./component/studentFees";
+import TimelineResource from "./timeline/timeline-resourses";
+import StudentTimeline from "./timeline/studentTimeline";
 
 function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
+        <Route exact path="/teacherSchedule/:id/:classname"><TeacherZone><TimelineResource/></TeacherZone></Route>
+        <Route exact path="/studentSchedule/:id/:classname"><StudentZone><StudentTimeline/></StudentZone></Route>
         <Route path="/main" component={Main}/>
+        <Route path="/" component={Main}/>
         <Route path="/teacherResources/:id/:classname"><TeacherZone><Resources ></Resources></TeacherZone></Route>
         <Route path="/studentResources/:id/:classname"><StudentZone><Resources ></Resources></StudentZone></Route>
         <Route path="/teacherDashboard/:id">
