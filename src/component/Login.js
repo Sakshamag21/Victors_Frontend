@@ -28,7 +28,7 @@ function Login() {
         console.log("Password:", password);
 
         try {
-            const response = await fetch('http://localhost:8000/user/login', {
+            const response = await fetch('https://victors-backend.vercel.app/user/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -67,7 +67,7 @@ function Login() {
 
     const sendPasswordMail = async(pass,email)=>{
         try {
-            const response = await fetch('http://localhost:8000/mail/password-mail', {
+            const response = await fetch('https://victors-backend.vercel.app/mail/password-mail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -94,7 +94,7 @@ function Login() {
     const handleForgotPasswordSubmit = async () => {
         console.log('Forgot Password Input:', forgotPasswordInput);
         try {
-            const response = await fetch(`http://localhost:8000/user/users/password/${forgotPasswordInput}`, {
+            const response = await fetch(`https://victors-backend.vercel.app/user/users/password/${forgotPasswordInput}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

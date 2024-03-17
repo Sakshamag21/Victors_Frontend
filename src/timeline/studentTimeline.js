@@ -28,7 +28,7 @@ const StudentTimeline = () => {
     // Function to fetch schedule data based on class name
     const fetchScheduleByClass = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/schedule/getschedule/${classname}`);
+            const response = await fetch(`https://victors-backend.vercel.app/schedule/getschedule/${classname}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch schedule');
             }

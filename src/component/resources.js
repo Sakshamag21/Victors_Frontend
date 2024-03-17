@@ -12,7 +12,7 @@ function Resources(){
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/resources/classes/${classname}/subjects`);
+                const response = await fetch(`https://victors-backend.vercel.app/resources/classes/${classname}/subjects`);
                 if (response.ok) {
                     const data = await response.json();
                     const val=data[0].resources;

@@ -1,4 +1,4 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Main from "./component/Main";
 import TeacherZone from "./component/teacherZone";
 import Login from "./component/Login";
@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/teacherSchedule/:id/:classname"><TeacherZone><TimelineResource/></TeacherZone></Route>
         <Route exact path="/studentSchedule/:id/:classname"><StudentZone><StudentTimeline/></StudentZone></Route>
         <Route path="/main" component={Main}/>
-        <Route path="/" component={Main}/>
+        
         <Route path="/teacherResources/:id/:classname"><TeacherZone><Resources ></Resources></TeacherZone></Route>
         <Route path="/studentResources/:id/:classname"><StudentZone><Resources ></Resources></StudentZone></Route>
         <Route path="/teacherDashboard/:id">
@@ -61,6 +61,7 @@ function App() {
         <Route path="/Register" component={SignUp}/>
         <Route path="/Gallery" component={Gallery}/>
         <Route path="/teacherResult/:id"><TeacherZone><TeacherResult></TeacherResult></TeacherZone></Route>
+        <Redirect from="/" to="/main" />
       </Switch>
     </div>
   );
