@@ -1,4 +1,4 @@
-import { ButtonGroup, Button, Typography } from '@mui/material';
+import { ButtonGroup, Button, Typography, CircularProgress } from '@mui/material';
 import { useState,useEffect } from 'react';
 
 export default function TeacherAttendance({teacherData}) {
@@ -86,6 +86,9 @@ export default function TeacherAttendance({teacherData}) {
     for (let i = 0; i < studentData.length; i += 6) {
         chunkedRows.push(studentData.slice(i, i + 6));
     }}
+    if(!studentData){
+        return <CircularProgress/>
+    }
 
     return (
         <div style={{display:"flex",flexDirection:"column"}}>

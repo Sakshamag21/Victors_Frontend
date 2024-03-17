@@ -1,9 +1,10 @@
+import { CircularProgress } from '@mui/material';
 import * as React from 'react';
 
 function TeacherDashboard({teacherData}){
   if (!teacherData) {
       // Render a loading message or component when studentData is not available
-      return <div>Loading...</div>;
+      return <CircularProgress/>;
   }
     return (<div class="info" style={{width:"30vw",display:"flex",flexDirection:"column",alignItems:"center",marginTop:"-30vh"}}>
     <div>

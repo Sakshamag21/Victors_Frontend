@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useState,useEffect } from 'react';
+import { CircularProgress } from '@mui/material';
 
 const rows = [
     {'name':"Exam 1",'math':20,'science':20,'english':20,'sst':20},
@@ -46,7 +47,7 @@ export default function StudentResult({studentData}) {
   console.log(results,rows2,"yes")
   if (!studentData || !rows2) {
     // Render a loading message or component when studentData is not available
-    return <div>Loading...</div>;
+    return <CircularProgress/>;
 }
   return (
     <TableContainer style={{width:"80vw", marginTop:"-20vh"}}>

@@ -1,9 +1,10 @@
+import { CircularProgress } from '@mui/material';
 import React from 'react';
 
 function StudentDashboard({ studentData }) {
     if (!studentData) {
         // Render a loading message or component when studentData is not available
-        return <div>Loading...</div>;
+        return (<CircularProgress/>);
     }
 
     return (

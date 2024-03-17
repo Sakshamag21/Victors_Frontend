@@ -9,7 +9,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import TablePagination from '@mui/material/TablePagination';
-import { Typography } from '@mui/material';
+import { CircularProgress, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 
 
@@ -78,7 +78,7 @@ export default function StudentAttendance({studentData}) {
     // console.log(studentData)
     const rows=[{name:"One",status:true},{name:"One",status:true},{name:"One",status:true},{name:"One",status:true}]
     if(!studentattendanceData){
-        return(<p>Loading....</p>)
+        return(<CircularProgress/>)
     }
   return (
     <div style={{display:"flex",flexDirection:"column",alignItems:"center",zIndex:0}}>

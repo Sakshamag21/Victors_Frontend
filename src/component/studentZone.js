@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 // import './StudentZone.css'; // Import any CSS file if needed
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useParams } from 'react-router-dom/cjs/react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 
@@ -48,6 +49,35 @@ function StudentZone({ children }) {
         console.log(dropdownContent, e.target, "19")
         dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
     };
+
+    if(!studentData){
+        return(<div>
+            <div className="Navbar">
+                <img src="../../static/logo.jpeg" id="logo" alt="logo" />
+                <p id="username">Username</p>
+                <div><a href='../../main'><LogoutIcon id="logout" /></a></div>
+            </div>
+
+            <div id="mySidenav" className={`sidenav ${navOpen ? 'open' : ''}`}>
+                <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+                <img src="../../static/profile_photo.png" id="profile_photo" alt="profile_photo" />
+                <a href={`../../studentDashboard/${id}`}>Dashboard</a>
+                <a href={`../../studentAttendance/${id}`}>Attendance</a>
+                <a href={`../../studentResult/${id}`}>Examination Results</a>
+                <a href={`../../studentFees/${id}`}>Fee Status/Dues</a>
+                {studentClass &&<a href={`../../studentSchedule/${id}/${studentClass}`}>Time Table</a>}
+                {studentClass &&<a href={`../../studentResources/${id}/${studentClass}`}>Study Resources</a>}
+            </div>
+
+            <div id="main">
+                <span className="open" onClick={openNav}>&#9776;</span>
+                <span id="title"></span>
+            </div>
+            <div style={{display:'flex',justifyContent:"center",alignItems:'center',height:"90vh",backgroundImage:'url("../../static/back6.jpg")',backgroundSize:'cover'}}>
+                <CircularProgress/>
+            </div>
+        </div>)
+    }
 
     return (
         <div>
