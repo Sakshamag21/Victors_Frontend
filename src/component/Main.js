@@ -486,76 +486,59 @@ function Main () {
             <Carousel style={{marginLeft:"0px",width:"90vw"}} autoplay arrows={true} prevArrow={<ArrowBackIcon style={{color:"black !important"}}/>}  nextArrow={<ArrowForwardIcon/>}>
             <div>
             <div style={contentStyleAchievments}>
-                <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgwmyuCO0GXt88ZOrEBfmRoK_QjVbr7r2HrMBmA8UBbw&s" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
                 <div style={{width:"800px",height:"250px",display:"flex",alignItems:'flex-start',flexDirection:'column',marginLeft:'20px'}}>
-                <h2 style={{height:"30px"}}>Saksham Agarwal | 90%</h2>
-                <p> dhsgvchsdvcshcvdhcvhcvchdsvsydufbfdsgyufvsdgudsgff dsyufg dufugdfudsgfsffffsdfvdsjbvxvv vjvj</p>
+                <h2 style={{height:"30px"}}>Mayankit | 90%</h2>
+                <p style={{fontSize:"20px"}}> Victor's coaching institute provided excellent guidance and resources. The faculty was knowledgeable and supportive, and their teaching methods were highly effective. I saw a significant improvement in my performance after joining.</p>
                 </div>
             </div>
             </div>
             <div>
             <div style={contentStyleAchievments}>
-                <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv3ZSoMVNQnP6qsxXFmRlE-7jTtJUs7chTE04Gar-5Jg&s" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
                 <div style={{width:"800px",height:"250px",display:"flex",alignItems:'flex-start',flexDirection:'column',marginLeft:'20px'}}>
-                <h2 style={{height:"30px"}}>Saksham Agarwal | 90%</h2>
-                <p> dhsgvchsdvcshcvdhcvhcvchdsvsydufbfdsgyufvsdgudsgff dsyufg dufugdfudsgfsffffsdfvdsjbvxvv vjvj</p>
+                <h2 style={{height:"30px"}}>Tanmay Bhatt | 94.3%</h2>
+                <p style={{fontSize:"20px"}}>I had a great experience at Victor's coaching institute. The teachers were dedicated and passionate about helping students succeed. The study material provided was comprehensive, and the regular mock tests helped me gauge my progress.</p>
                 </div>
             </div>
             </div>
             <div>
             <div style={contentStyleAchievments}>
-                <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
+                <img src="https://cdn-icons-png.flaticon.com/512/1999/1999625.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
                 <div style={{width:"800px",height:"250px",display:"flex",alignItems:'flex-start',flexDirection:'column',marginLeft:'20px'}}>
-                <h2 style={{height:"30px"}}>Saksham Agarwal | 90%</h2>
-                <p> dhsgvchsdvcshcvdhcvhcvchdsvsydufbfdsgyufvsdgudsgff dsyufg dufugdfudsgfsffffsdfvdsjbvxvv vjvj</p>
+                <h2 style={{height:"30px"}}>Sunny Raja Prasad | 95%</h2>
+                <p style={{fontSize:"20px"}}> Victor's coaching institute exceeded my expectations. The faculty members were experts in their respective subjects, and their personalized attention to each student's needs was commendable. I credit my high score to their guidance and support.</p>
                 </div>
             </div>
             </div>
             <div>
             <div style={contentStyleAchievments}>
-                <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQWx87fvsE-H0vikMbBs5_BlIECp19HcI-UjkAv7ttQ&s" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
                 <div style={{width:"800px",height:"250px",display:"flex",alignItems:'flex-start',flexDirection:'column',marginLeft:'20px'}}>
-                <h2 style={{height:"30px"}}>Saksham Agarwal | 90%</h2>
-                <p> dhsgvchsdvcshcvdhcvhcvchdsvsydufbfdsgyufvsdgudsgff dsyufg dufugdfudsgfsffffsdfvdsjbvxvv vjvj</p>
+                <h2 style={{height:"30px"}}>Akshay Narayan | 88%</h2>
+                <p style={{fontSize:"20px"}}>I highly recommend Victor's coaching institute to anyone preparing for competitive exams. The faculty created a conducive learning environment, and their emphasis on conceptual clarity was instrumental in my success. I'm grateful for their guidance.</p>
                 </div>
             </div>
             </div>
             <div>
             <div style={contentStyleAchievments}>
-                <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLi4MQH22cBfTah5QNtWfHkM33e5NSGbgEV9yHfBZzipKP0HA389s5lQjEzMoLIvj7Wjs&usqp=CAU" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
                 <div style={{width:"800px",height:"250px",display:"flex",alignItems:'flex-start',flexDirection:'column',marginLeft:'20px'}}>
-                <h2 style={{height:"30px"}}>Saksham Agarwal | 90%</h2>
-                <p> dhsgvchsdvcshcvdhcvhcvchdsvsydufbfdsgyufvsdgudsgff dsyufg dufugdfudsgfsffffsdfvdsjbvxvv vjvj</p>
+                <h2 style={{height:"30px"}}>Aryan Bharadwaj | 92%</h2>
+                <p style={{fontSize:"20px"}}> Enrolling at Victor's coaching institute was one of the best decisions I made for my exam preparation. The faculty members were not only knowledgeable but also approachable, always willing to address doubts and provide extra assistance when needed.</p>
                 </div>
             </div>
             </div>
             <div>
             <div style={contentStyleAchievments}>
-                <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9m15jQ6cf-AX45R4UMydPF1Tq4lmgMJXw1Q&s" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
                 <div style={{width:"800px",height:"250px",display:"flex",alignItems:'flex-start',flexDirection:'column',marginLeft:'20px'}}>
-                <h2 style={{height:"30px"}}>Saksham Agarwal | 90%</h2>
-                <p> dhsgvchsdvcshcvdhcvhcvchdsvsydufbfdsgyufvsdgudsgff dsyufg dufugdfudsgfsffffsdfvdsjbvxvv vjvj</p>
+                <h2 style={{height:"30px"}}>Anuraag Sharma | 96%</h2>
+                <p style={{fontSize:"20px"}}> Victor's coaching institute helped me build a strong foundation in the subjects I struggled with. The study materials were well-structured, and the regular assessment tests helped me track my progress effectively. I'm thankful for their guidance.</p>
                 </div>
             </div>
             </div>
-            <div>
-            <div style={contentStyleAchievments}>
-                <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
-                <div style={{width:"800px",height:"250px",display:"flex",alignItems:'flex-start',flexDirection:'column',marginLeft:'20px'}}>
-                <h2 style={{height:"30px"}}>Saksham Agarwal | 90%</h2>
-                <p> dhsgvchsdvcshcvdhcvhcvchdsvsydufbfdsgyufvsdgudsgff dsyufg dufugdfudsgfsffffsdfvdsjbvxvv vjvj</p>
-                </div>
-            </div>
-            </div>
-            <div>
-            <div style={contentStyleAchievments}>
-                <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
-                <div style={{width:"800px",height:"250px",display:"flex",alignItems:'flex-start',flexDirection:'column',marginLeft:'20px'}}>
-                <h2 style={{height:"30px"}}>Saksham Agarwal | 90%</h2>
-                <p> dhsgvchsdvcshcvdhcvhcvchdsvsydufbfdsgyufvsdgudsgff dsyufg dufugdfudsgfsffffsdfvdsjbvxvv vjvj</p>
-                </div>
-            </div>
-            </div>
+            
             </Carousel>
         </div>
         <Typography variant="h3" style={{color:'#1976d2',fontWeight:'500',marginBottom:'50px'}} id="Contact Us">Drop Us a Message</Typography>
@@ -597,6 +580,36 @@ function Main () {
             </div>
         </form>
     </div>
+    <footer class="footer">
+  	 <div class="footer-container">
+  	 	<div class="footer-row">
+  	 		<div class="footer-col">
+  	 			<h4>Useful Links</h4>
+  	 			<ul>
+  	 				<li><a href="#Home">Home</a></li>
+  	 				<li><a href="#About">About</a></li>
+  	 				<li><a href="#FAQ">FAQ</a></li>
+  	 				<li><a href="#Achievements">Achievements</a></li>
+                    <li><a href="#Contact Us">Contact Us</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>Address</h4>
+  	 			<p>VICTOR’S TOWER Ara-Patna Road Near Gaurakshini Flyover Sasaram, Bihar, India 821115</p>
+                <p>Pavitra Bandhan Campus, Tomb Road No. 01, Sasaram, Bihar, India, 821115</p>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="https://www.facebook.com/VictorSasaram/"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="https://www.instagram.com/victor_sasaram/"><i class="fab fa-instagram"></i></a>
+  	 				<a href="https://in.linkedin.com/company/victor-s-career-foundation-institute"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
 
     </>)
 };

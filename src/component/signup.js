@@ -59,7 +59,7 @@ function SignUp() {
         p: 4,
       };
     const [errors, setErrors] = useState({});
-    const [currOTP,setCurrOTP]=useState(9000);
+    const [currOTP,setCurrOTP]=useState(0);
     const [otpError,setOTPError]=useState();
     const [open, setOpen] = React.useState(false);
     const [singupData,setSignupData]=useState();
@@ -102,6 +102,7 @@ function SignUp() {
         if(parseInt(otp)===currOTP){
             console.log("signup successful")
             try {
+                alert("Please Wait for Some Time.....")
                 const response = await fetch('https://victors-backend.vercel.app/user/register', {
                     method: 'POST',
                     headers: {
@@ -133,11 +134,8 @@ function SignUp() {
     
 
     const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent default form submission behavior
-        
+        event.preventDefault(); 
         const formData = new FormData(event.target);
-
-        // Input validations
         const username = formData.get('Username');
         const email = formData.get('Email');
         const firstName = formData.get('firstname');
@@ -202,27 +200,22 @@ function SignUp() {
                 password: password,
                 "id": generateRandomId(),
                 role: selectedRole,
-
               });
-                    
             var otpp=generateOTP();
             setCurrOTP(otpp)
             sendOTPMail(otpp,email)
             
             console.log('Form submitted successfully');
         } else {
-            // If there are errors, set the state to display them
             setErrors(newErrors);
         }
     };
 
     const isValidEmail = (email) => {
-        // Simple email validation regex
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
 
     const isValidMobileNumber = (mobileNumber) => {
-        // Simple mobile number validation regex
         return /^\d{10}$/.test(mobileNumber);
     };
 
