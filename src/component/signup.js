@@ -84,7 +84,7 @@ function SignUp() {
                 alert('OTP sended succesfully')
             } else {
                 console.error('Something went wrong');
-                alert('Something went wrong, please try again')
+                // alert('Something went wrong, please try again')
             }
         } catch (error) {
             console.error('Error registering user:', error.message);
@@ -102,7 +102,7 @@ function SignUp() {
         if(parseInt(otp)===currOTP){
             console.log("signup successful")
             try {
-                alert("Please Wait for Some Time.....")
+                // alert("Please Wait for Some Time.....")
                 const response = await fetch('https://victors-backend.vercel.app/user/register', {
                     method: 'POST',
                     headers: {
@@ -114,7 +114,7 @@ function SignUp() {
                 if (!response.ok) {
                     console.log(response)
                 }
-                if (response.status === 200) {
+                if (response.status === 201) {
                     console.log('User registered successfully');
                     window.location.href = './Login';
                 } else {
