@@ -445,5 +445,13 @@ height:3rem;
     margin-left: 26%;
     border: 1px solid black;
   }
+
+.slick-prev,.slick-next{
+  color: #191818 !important;
+  font-size: 30px !important;
+  width: 30px !important;
+  height: 30px !important;
+  /* background-color: #191818 !important; */
+}
   
   

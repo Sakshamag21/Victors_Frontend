@@ -37,7 +37,7 @@ function Resources(){
     <div><a href={resourceData.Science}><img src="../../static/science.png" alt="Image 1" id="Science"/></a></div>
     <div><a href={resourceData["Math"]}><img src="../../static/math.jpg" alt="Image 2" id="Science"/></a></div>
     <div><a href={resourceData.SST}><img src="../../static/sst.jpg" alt="Image 3" id="Science"/></a></div>
-    <div><a href={resourceData.English}><img src="../../static/english.jpg" alt="Image 4" id="Science"/></a></div>
+    <div><a href={resourceData["English "]}><img src="../../static/english.jpg" alt="Image 4" id="Science"/></a></div>
     </div>)
 }
 

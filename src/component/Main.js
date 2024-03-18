@@ -25,6 +25,10 @@ import { Divider, List, Skeleton } from 'antd';
 import { Form, Input, InputNumber } from 'antd';
 import SendIcon from '@mui/icons-material/Send';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
 
@@ -122,9 +126,9 @@ function Main () {
         setAnchorElUser(null);
     };
     const contentStyle = {
-        height: '450px',
+        height: '400px',
         color: '#fff',
-        lineHeight: '450px',
+        lineHeight: '400px',
         textAlign: 'center',
         background: '#364d79',
         objectFit:'fill'
@@ -311,31 +315,34 @@ function Main () {
             </Carousel>
 
         </div>
-        <div style={{margin:'20px 20px', position:'relative',top:'-10vh',left:'70vw',width:'350px'}}>
+        <div style={{margin:'20px 20px', position:'relative',top:'-1vh',left:'55vw',width:'600px'}}>
                 <Carousel autoplay>
                 <div>
-                <img src='../static/victor1.jpeg' style={contentStyle}/>
+                <img src='../static/banners/i1.jpg' style={contentStyle}/>
                 </div>
                 <div>
-                <img src='../static/victor2.jpeg' style={contentStyle}/>
+                <img src='../static/banners/i2.jpg' style={contentStyle}/>
                 </div>
                 <div>
-                <img src='../static/victor3.jpeg' style={contentStyle}/>
+                <img src='../static/banners/i3.jpg' style={contentStyle}/>
                 </div>
                 <div>
-                <img src='../static/victor4.jpeg' style={contentStyle}/>
+                <img src='../static/banners/i4.jpg' style={contentStyle}/>
                 </div>
                 <div>
-                <img src='../static/victor5.jpg' style={contentStyle}/>
+                <img src='../static/banners/i5.jpg' style={contentStyle}/>
                 </div>
                 <div>
-                <img src='../static/victor6.jpg' style={contentStyle}/>
+                <img src='../static/banners/i6.jpg' style={contentStyle}/>
                 </div>
                 <div>
-                <img src='../static/victor7.jpg' style={contentStyle}/>
+                <img src='../static/banners/i7.jpg' style={contentStyle}/>
                 </div>
                 <div>
-                <img src='../static/victor8.jpg' style={contentStyle}/>
+                <img src='../static/banners/i8.jpg' style={contentStyle}/>
+                </div>
+                <div>
+                <img src='../static/banners/i9.jpg' style={contentStyle}/>
                 </div>
             </Carousel>
             
@@ -355,8 +362,9 @@ function Main () {
             />   
         </div>
     </div>
-    <div style={{ height: '150vh', display: 'flex', justifyContent: 'center', textAlign: 'center' ,alignItems:'center',flexDirection:'column'}}>
-    <div style={{width:'70vw',paddingBottom:'140px'}} id="About">
+    <div id="About"></div>
+    <div  style={{ height: '150vh', display: 'flex', justifyContent: 'center', textAlign: 'center' ,alignItems:'center',flexDirection:'column'}}>
+    <div style={{width:'70vw',paddingBottom:'140px'}} >
         <Typography variant="h1" style={{color:'#1976d2',fontWeight:'900'}}>About Us</Typography>
         <hr style={{width:'70vw',marginBottom:'50px',height:'5px',backgroundColor:'#1976d2'}}/>
         <Typography variant="h6">Welcome to Victor Coaching, where we believe in empowering individuals to unleash their full potential and achieve their dreams. With a legacy spanning over 3 years, Victor Coaching has been a beacon of inspiration and transformation for countless individuals seeking to excel in their personal and professional endeavors.</Typography>
@@ -475,7 +483,7 @@ function Main () {
     <div id="Achievements" style={{backgroundColor: 'white', height: '150vh', display: 'flex', justifyContent: 'center',alignItems:'center',flexDirection:'column'}}>
         <div style={{marginBottom:"100px",display:'flex',flexDirection:'column',alignItems:'center'}}>
             <Typography variant="h3" style={{color:'#1976d2',fontWeight:'500',marginBottom:'10px'}}>Reviews</Typography>
-            <Carousel style={{marginLeft:"0px",width:"90vw"}} autoplay>
+            <Carousel style={{marginLeft:"0px",width:"90vw"}} autoplay arrows={true} prevArrow={<ArrowBackIcon style={{color:"black !important"}}/>}  nextArrow={<ArrowForwardIcon/>}>
             <div>
             <div style={contentStyleAchievments}>
                 <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" style={{width:"200px",height:"200px", borderRadius:"100px",marginTop:"25px",marginLeft:"25px"}}></img>
