@@ -79,7 +79,7 @@ function SignUp() {
             if (!response.ok) {
                 console.log(response)
             }
-            if (response.status === 200) {
+            if (response.status === 201) {
                 console.log('OTP sended succesfully');
                 alert('OTP sended succesfully')
             } else {

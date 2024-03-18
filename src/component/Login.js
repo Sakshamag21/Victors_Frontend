@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal } from '@mui/material';
+import { Button, CircularProgress, Modal } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 function Login() {
     const [showModal, setShowModal] = useState(false);
     const [forgotPasswordInput, setForgotPasswordInput] = useState('');
+    const [loginProgress,setLoginProgress]=useState(false)
     const style = {
         position: 'absolute',
         top: '50%',
@@ -26,6 +27,7 @@ function Login() {
 
         console.log("Username:", username);
         console.log("Password:", password);
+        setLoginProgress(true)
 
         try {
             const response = await fetch('https://victors-backend.vercel.app/user/login', {
@@ -37,6 +39,7 @@ function Login() {
             });
 
             if (response.ok) {
+                setLoginProgress(false)
                 const data = await response.json();
                 console.log(data.name);
                 console.log(data.role);
@@ -49,6 +52,7 @@ function Login() {
                 }
                 console.log('User Logged in successfully');
             } else {
+                setLoginProgress(false)
                 alert('Wrong Name and password');
             }
         } catch (error) {
@@ -123,7 +127,7 @@ function Login() {
     return (
         <div className='login-signup' style={{height:"100vh"}}>
             <a href="./main" className="signup-home-button">Home</a>
-            <div className="createbox">
+            {!loginProgress && <div className="createbox">
                 <form className="form" id="signin" onSubmit={handleLogin}>
                     <h1 className="form__title">Login</h1>
                     <div className="form__input-group">
@@ -144,7 +148,8 @@ function Login() {
                         <a href="./Register">Don't have an account? <br/> Create account</a>
                     </div>
                 </form>
-            </div>
+            </div>}
+            {loginProgress && <CircularProgress style={{color:"white"}}/>}
             <Modal open={showModal} onClose={handleCloseModal} >
             <Box sx={style}>
                 <div className="modal-content">

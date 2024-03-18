@@ -437,5 +437,13 @@ height:3rem;
       height: 150px;
       border-radius: 150%;
   }
+
+  .dashboard_table,
+  .dashboard_table th,
+  .dashboard_table td {
+    margin-top: 5%;
+    margin-left: 26%;
+    border: 1px solid black;
+  }
   
   
