@@ -30,7 +30,7 @@ function Login() {
         setLoginProgress(true)
 
         try {
-            const response = await fetch('https://victors-backend.vercel.app/user/login', {
+            const response = await fetch('http://localhost:8000/user/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -69,14 +69,14 @@ function Login() {
         setShowModal(false);
     };
 
-    const sendPasswordMail = async(pass,email)=>{
+    const sendPasswordMail = async(pass,email,name)=>{
         try {
-            const response = await fetch('https://victors-backend.vercel.app/mail/password-mail', {
+            const response = await fetch('http://localhost:8000/mail/password-mail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({password:pass,email:email})
+                body: JSON.stringify({password:pass,email:email,name:name})
             });
 
             if (!response.ok) {
@@ -98,7 +98,7 @@ function Login() {
     const handleForgotPasswordSubmit = async () => {
         console.log('Forgot Password Input:', forgotPasswordInput);
         try {
-            const response = await fetch(`https://victors-backend.vercel.app/user/users/password/${forgotPasswordInput}`, {
+            const response = await fetch(`http://localhost:8000/user/users/password/${forgotPasswordInput}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -109,8 +109,8 @@ function Login() {
                 const data = await response.json();
                 
                 // alert(`Password found: ${data.password}`);
-                console.log(data.password, data.email)
-                sendPasswordMail(data.password,data.email)
+                console.log(data.password, data.email, data.name,data)
+                sendPasswordMail(data.password,data.email,data.name)
             } else if (response.status === 404) {
                 alert('User not found');
             } else {
@@ -142,7 +142,7 @@ function Login() {
                     </div>
                     <button className="form__button" type="submit">Login</button>
                     <div className="form__link">
-                        <Button onClick={handleForgotPassword}>Forgot Password</Button>
+                        <Button onClick={handleForgotPassword}>Forgot Name or Password</Button>
                     </div>
                     <div className="form__link">
                         <a href="./Register">Don't have an account? <br/> Create account</a>

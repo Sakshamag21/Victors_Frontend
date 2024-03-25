@@ -54,7 +54,7 @@ export default function TeacherResult({teacherData}) {
         console.log("in")
         const getTeacherData = async () => {
             try {
-                const response = await fetch(`https://victors-backend.vercel.app/user/users/class/${teacherClass}`, {
+                const response = await fetch(`http://localhost:8000/user/users/class/${teacherClass}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ export default function TeacherResult({teacherData}) {
 
   const submitResultData=async(data)=>{
     try {
-        const response = await fetch(`https://victors-backend.vercel.app/results/examination-results`, {
+        const response = await fetch(`http://localhost:8000/results/examination-results`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

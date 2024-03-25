@@ -12,7 +12,7 @@ function TeacherZone({ children }) {
         console.log("in")
         const getTeacherData = async () => {
             try {
-                const response = await fetch(`https://victors-backend.vercel.app/user/users/id/${id}`, {
+                const response = await fetch(`http://localhost:8000/user/users/id/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

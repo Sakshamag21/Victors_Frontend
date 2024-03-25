@@ -68,7 +68,7 @@ function SignUp() {
 
     const sendOTPMail=async(otp,email)=>{
         try {
-            const response = await fetch('https://victors-backend.vercel.app/mail/otp-verification', {
+            const response = await fetch('http://localhost:8000/mail/otp-verification', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -79,16 +79,17 @@ function SignUp() {
             if (!response.ok) {
                 console.log(response)
             }
-            if (response.status === 201) {
+            if (response.status === 200) {
                 console.log('OTP sended succesfully');
                 alert('OTP sended succesfully')
             } else {
                 console.error('Something went wrong');
-                // alert('Something went wrong, please try again')
+                console.log(response.status, response.message)
+                alert('Something went wrong, with mailing sevice please try again')
             }
         } catch (error) {
             console.error('Error registering user:', error.message);
-            alert('Something went wrong with server')
+            // alert('Something went wrong with server')
         }
     }
 
@@ -103,7 +104,7 @@ function SignUp() {
             console.log("signup successful")
             try {
                 // alert("Please Wait for Some Time.....")
-                const response = await fetch('https://victors-backend.vercel.app/user/register', {
+                const response = await fetch('http://localhost:8000/user/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -114,12 +115,15 @@ function SignUp() {
                 if (!response.ok) {
                     console.log(response)
                 }
+                console.log(response)
                 if (response.status === 201) {
                     console.log('User registered successfully');
                     window.location.href = './Login';
-                } else {
-                    console.error('Something went wrong');
-                    alert('Something went wrong, please try again')
+                } else if(response.status===401){
+                    alert("Email already registered. Try with other email")
+                }else {
+                    console.error('Something went wrong',response);
+                    alert(response.status)
                 }
             } catch (error) {
                 console.error('Error registering user:', error.message);
