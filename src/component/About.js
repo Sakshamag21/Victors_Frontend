@@ -7,7 +7,7 @@ function About() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/results/examination-results/class/${className}`);
+        const response = await fetch(`https://victors-backend.vercel.app/results/examination-results/class/${className}`);
         if (response.ok) {
           const data = await response.json();
           setResults(data);
