@@ -23,7 +23,7 @@ export default function StudentResult({studentData}) {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await fetch(`https://victors-backend.vercel.app/results/examination-results/class/${studentData.class}/students/${studentData.name}`);
+        const response = await fetch(`http://localhost:8000/results/examination-results/class/${studentData.class}/students/${studentData.name}`);
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

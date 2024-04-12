@@ -20,14 +20,6 @@ function StudentDashboard({ studentData }) {
                         <td>{studentData.name}</td>
                     </tr>
                     <tr>
-                        <td><strong>Age(in years)</strong></td>
-                        <td>{studentData.age}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Gender</strong></td>
-                        <td>{studentData.gender}</td>
-                    </tr>
-                    <tr>
                         <td><strong>Email</strong></td>
                         <td>{studentData.email}</td>
                     </tr>

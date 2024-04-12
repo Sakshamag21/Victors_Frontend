@@ -53,7 +53,7 @@ export default function StudentAttendance({studentData}) {
         console.log("in")
         const getData = async () => {
             try {
-                const response = await fetch(`https://victors-backend.vercel.app/attendance/userattendance/${studentClass}/${name}`, {
+                const response = await fetch(`http://localhost:8000/attendance/userattendance/${studentClass}/${name}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

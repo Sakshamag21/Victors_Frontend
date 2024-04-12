@@ -54,7 +54,7 @@ export default function TeacherResult({teacherData}) {
         console.log("in")
         const getTeacherData = async () => {
             try {
-                const response = await fetch(`https://victors-backend.vercel.app/user/users/class/${teacherClass}`, {
+                const response = await fetch(`http://localhost:8000/user/users/class/${teacherClass}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ export default function TeacherResult({teacherData}) {
 
   const submitResultData=async(data)=>{
     try {
-        const response = await fetch(`https://victors-backend.vercel.app/results/examination-results`, {
+        const response = await fetch(`http://localhost:8000/results/examination-results`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -98,10 +98,12 @@ export default function TeacherResult({teacherData}) {
             body: JSON.stringify(data)
         });
         console.log(response)
-        if (response.status === 200) {
+        if (response.status === 201) {
             console.log('Data saved successfully');
+            alert('Data Saved Successfully')
         } else {
             console.error('Something went wrong');
+            alert('Something went wrong')
         }
     } catch (error) {
         console.error('Error registering user:', error.message);
@@ -152,7 +154,10 @@ export default function TeacherResult({teacherData}) {
     <div style={{display:"flex",flexDirection:"column",alignItems:"center",zIndex:0}}>
     <Typography variant="h3">Upload Class results</Typography>
     <form onSubmit={handleSubmit} > 
-    <input style={{width:"40px"}} type="text" id={`examid`} name={`examid`} onChange={(event) => handleInputChange(event, `examid`)}/>
+    <div style={{display:'flex',alignItems:'center'}}>
+      <h4>Exam id:-</h4>
+      <input style={{width:"40px",height:'20px'}} type="text" id={`examid`} name={`examid`} onChange={(event) => handleInputChange(event, `examid`)}/>
+    </div>
       <TableContainer  style={{marginLeft:"0",width:"80vw",border:"1px black solid",zIndex:0}} sx={{ maxHeight: 440 }}>
         <Table aria-label="customized table" style={{marginTop:"0"}} stickyHeader>
           <TableHead>

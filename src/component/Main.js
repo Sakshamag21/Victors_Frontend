@@ -206,12 +206,23 @@ function Main () {
             }
         });
     };
+    const isValidEmail = (email) => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('Form data:', formData);
+        
+        if(formData.user.name && formData.user.email && formData.user.message && isValidEmail(formData.user.email)){
+            alert('Message sent successfully. You will be contacted soon regarding your query.');
+        } else {
+            alert('Please fill out all fields correctly before submitting.');
+        }
+        
         try {
-            const response = await fetch('https://victors-backend.vercel.app/mail/query-mail', {
+            const response = await fetch('http://localhost:8000/mail/query-mail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -602,7 +613,6 @@ function Main () {
   	 			<h4>follow us</h4>
   	 			<div class="social-links">
   	 				<a href="https://www.facebook.com/VictorSasaram/"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="#"><i class="fab fa-twitter"></i></a>
   	 				<a href="https://www.instagram.com/victor_sasaram/"><i class="fab fa-instagram"></i></a>
   	 				<a href="https://in.linkedin.com/company/victor-s-career-foundation-institute"><i class="fab fa-linkedin-in"></i></a>
   	 			</div>

@@ -68,7 +68,7 @@ function SignUp() {
 
     const sendOTPMail=async(otp,email)=>{
         try {
-            const response = await fetch('https://victors-backend.vercel.app/mail/otp-verification', {
+            const response = await fetch('http://localhost:8000/mail/otp-verification', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ function SignUp() {
             }
             if (response.status === 200) {
                 console.log('OTP sended succesfully');
-                alert('OTP sended succesfully')
+                alert('OTP sended succesfully on your email')
             } else {
                 console.error('Something went wrong');
                 console.log(response.status, response.message)
@@ -104,7 +104,7 @@ function SignUp() {
             console.log("signup successful")
             try {
                 // alert("Please Wait for Some Time.....")
-                const response = await fetch('https://victors-backend.vercel.app/user/register', {
+                const response = await fetch('http://localhost:8000/user/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -121,6 +121,8 @@ function SignUp() {
                     window.location.href = './Login';
                 } else if(response.status===401){
                     alert("Email already registered. Try with other email")
+                }else if(response.status===402){
+                    alert("Username already exsist. Try with other username")
                 }else {
                     console.error('Something went wrong',response);
                     alert(response.status)

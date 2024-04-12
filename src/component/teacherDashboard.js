@@ -20,23 +20,13 @@ function TeacherDashboard({teacherData}){
   </tr>
 
   <tr>
-    <td><strong>Age(in years)</strong></td>
-    <td>30</td>
-
-  </tr>
-  <tr>
     <td><strong>Email</strong></td>
     <td>{teacherData.email}</td>
   </tr>
 
   <tr>
-    <td><strong>Gender</strong></td>
-    <td>Female</td>
-
-  </tr>
-  <tr>
     <td><strong>Classes you teach</strong></td>
-    <td>6th, 7th, 8th, 9th, 10th</td>
+    <td>{teacherData.class}</td>
 
   </tr>
 

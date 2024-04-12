@@ -13,7 +13,7 @@ export default function TeacherAttendance({teacherData}) {
         console.log("in")
         const getTeacherData = async () => {
             try {
-                const response = await fetch(`https://victors-backend.vercel.app/user/users/class/${teacherClass}`, {
+                const response = await fetch(`http://localhost:8000/user/users/class/${teacherClass}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export default function TeacherAttendance({teacherData}) {
         }
         console.log(req)
         try {
-            const response = await fetch(`https://victors-backend.vercel.app/attendance/attendance`, {
+            const response = await fetch(`http://localhost:8000/attendance/attendance`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -70,9 +70,13 @@ export default function TeacherAttendance({teacherData}) {
                 body: JSON.stringify({class:teacherClass,date:currentDate,attendance:req})
             });
             console.log(response)
-            if (response.status === 200) {
+            if (response.status === 201) {
                 console.log('Data saved successfully');
-            } else {
+                alert('Data saved Successfully')
+            } else if(response.status===409){
+                alert('Attendance for this date is already marked')
+            }
+            else {
                 console.error('Something went wrong');
             }
         } catch (error) {
