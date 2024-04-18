@@ -222,7 +222,7 @@ function Main () {
         }
         
         try {
-            const response = await fetch('http://localhost:8000/mail/query-mail', {
+            const response = await fetch('https://victors-backend.vercel.app/mail/query-mail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

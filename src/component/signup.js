@@ -68,7 +68,7 @@ function SignUp() {
 
     const sendOTPMail=async(otp,email)=>{
         try {
-            const response = await fetch('http://localhost:8000/mail/otp-verification', {
+            const response = await fetch('https://victors-backend.vercel.app/mail/otp-verification', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -104,7 +104,7 @@ function SignUp() {
             console.log("signup successful")
             try {
                 // alert("Please Wait for Some Time.....")
-                const response = await fetch('http://localhost:8000/user/register', {
+                const response = await fetch('https://victors-backend.vercel.app/user/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -392,3 +392,5 @@ export default SignUp;
 //     "20. What is the policy for refunding fees in case of withdrawal?":
 //         "Our fee refund policy can be discussed in the office. In case of withdrawal, refunds are processed as per the terms and conditions mentioned in the policy."
 // }
+
+//https://victors-backend.vercel.app
